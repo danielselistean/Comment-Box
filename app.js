@@ -1,14 +1,14 @@
 const comments =[{
     name: 'razvan',
+    msg: 'ce faci?'
+},
+{
+    name: 'razvan',
     msg: 'ce faci2?'
 },
 {
     name: 'razvan',
     msg: 'ce faci3?'
-},
-{
-    name: 'razvan',
-    msg: 'ce faci4?'
 }
 ]
 
