@@ -1,17 +1,8 @@
 const comments =[{
+    id:'1',
     name: 'razvan',
     msg: 'ce faci?'
-},
-{
-    name: 'razvan',
-    msg: 'ce faci2?'
-},
-{
-    name: 'razvan',
-    msg: 'ce faci3?'
-}
-]
-
+}]
 
 const btn = document.querySelector('#commentBtn');
 const input = document.querySelector('#commentInput');
@@ -22,12 +13,11 @@ btn.addEventListener('click', function() {
         msg: input.value
     });
 
-   displayComments(comments, commentList)
+   displayComments(comments, document.body)
 })
 
 
-displayComments(comments, commentList)
-
+displayComments(comments, document.body)
 
 
 function displayComments(comments, containerNode) {
@@ -56,11 +46,13 @@ function displayComments(comments, containerNode) {
         return containerBox;
     }
 
-
+    // parcurgere commentarii
 
     for (let idx = 0; idx < comments.length; idx++) {
         const comment = comments[idx];
+        //creaza reprezentarea comentariului in DOM
         const commentNode = createCommentNode(comment);
+        // punem comentariul in DOM
         containerNode.appendChild(commentNode);
     }
 }
