@@ -30,14 +30,6 @@ btn.addEventListener('click', function() {
     }
 })
 
-
-/*function validateComment(comment) {
-    if (comment.name === "" || comment.msg === "") {
-        return false;
-    }
-    return true
-}*/
-
 function deleteChildren(element) {
 
     var child = element.lastElementChild;
@@ -125,7 +117,7 @@ function displayComments(comments, containerNode) {
         return containerBox;
     }
     
-    function deleteCommentById(commentId) {
+   function deleteCommentById(commentId) {
         for (let i = 0; i < comments.length; i++) {
             if (comments[i].id === commentId) {
                 comments.splice(comments[i].id, 1);
